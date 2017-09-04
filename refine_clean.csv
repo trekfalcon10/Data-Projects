@@ -1,0 +1,26 @@
+"company","product_category","product_code","product_number","address","city","country","full_address","name","company_akzo","company_philips","company_unilever","company_van_houten","product_laptop","product_smartphone","product_tablet","product_tv"
+"akzo","Tablet","q","5","Leeuwardenweg 182","arnhem","the netherlands","Leeuwardenweg 182, arnhem, the netherlands","mevr l.  rokken",1,0,0,0,0,0,1,0
+"akzo","Smartphone","p","34","Leeuwardenweg 181","arnhem","the netherlands","Leeuwardenweg 181, arnhem, the netherlands","dhr p. janssen",1,0,0,0,0,1,0,0
+"akzo","TV","v","43","Leeuwardenweg 178","arnhem","the netherlands","Leeuwardenweg 178, arnhem, the netherlands","dhr p. bansen",1,0,0,0,0,0,0,1
+"akzo","Tablet","q","9","Leeuwardenweg 183","arnhem","the netherlands","Leeuwardenweg 183, arnhem, the netherlands","mevr l.  lokken",1,0,0,0,0,0,1,0
+"akzo","Laptop","x","8","Leeuwardenweg 184","arnhem","the netherlands","Leeuwardenweg 184, arnhem, the netherlands","mevr l.  mokken",1,0,0,0,1,0,0,0
+"akzo","TV","v","12","Leeuwardenweg 179","arnhem","the netherlands","Leeuwardenweg 179, arnhem, the netherlands","dhr p. vansen",1,0,0,0,0,0,0,1
+"akzo","Laptop","x","5","Leeuwardenweg 180","arnhem","the netherlands","Leeuwardenweg 180, arnhem, the netherlands","dhr p. bransen",1,0,0,0,1,0,0,0
+"philips","TV","v","67","Delfzijlstraat 55","arnhem","the netherlands","Delfzijlstraat 55, arnhem, the netherlands","mevr l.  mokken",0,1,0,0,0,0,0,1
+"philips","Laptop","x","3","Groningensingel 149","arnhem","the netherlands","Groningensingel 149, arnhem, the netherlands","dhr j. Gansen",0,1,0,0,1,0,0,0
+"philips","Smartphone","p","43","Groningensingel 148","arnhem","the netherlands","Groningensingel 148, arnhem, the netherlands","dhr p. hansen",0,1,0,0,0,1,0,0
+"philips","Smartphone","p","56","Delfzijlstraat 54","arnhem","the netherlands","Delfzijlstraat 54, arnhem, the netherlands","mevr l.  mokken",0,1,0,0,0,1,0,0
+"philips","Smartphone","p","23","Groningensingel 152","arnhem","the netherlands","Groningensingel 152, arnhem, the netherlands","dhr p. franssen",0,1,0,0,0,1,0,0
+"philips","Smartphone","p","5","Groningensingel 147","arnhem","the netherlands","Groningensingel 147, arnhem, the netherlands","dhr p. jansen",0,1,0,0,0,1,0,0
+"philips","Laptop","x","12","Groningensingel 151","arnhem","the netherlands","Groningensingel 151, arnhem, the netherlands","dhr p. fransen",0,1,0,0,1,0,0,0
+"philips","TV","v","21","Delfzijlstraat 56","arnhem","the netherlands","Delfzijlstraat 56, arnhem, the netherlands","mevr l.  mokken",0,1,0,0,0,0,0,1
+"philips","Laptop","x","34","Groningensingel 150","arnhem","the netherlands","Groningensingel 150, arnhem, the netherlands","dhr p. mansen",0,1,0,0,1,0,0,0
+"unilever","Tablet","q","4","Jourestraat 24","arnhem","the netherlands","Jourestraat 24, arnhem, the netherlands","mevr l.  stokken",0,0,1,0,0,0,1,0
+"unilever","Tablet","q","8","Jourestraat 26","arnhem","the netherlands","Jourestraat 26, arnhem, the netherlands","mevr l.  rokken",0,0,1,0,0,0,1,0
+"unilever","Tablet","q","6","Jourestraat 25","arnhem","the netherlands","Jourestraat 25, arnhem, the netherlands","mevr l.  rokken",0,0,1,0,0,0,1,0
+"unilever","Laptop","x","3","Jourestraat 23","arnhem","the netherlands","Jourestraat 23, arnhem, the netherlands","mevr l.  gokken",0,0,1,0,1,0,0,0
+"van houten","TV","v","65","Delfzijlstraat 59","arnhem","the netherlands","Delfzijlstraat 59, arnhem, the netherlands","mevr l.  kokken",0,0,0,1,0,0,0,1
+"van houten","Laptop","x","21","Delfzijlstraat 60","arnhem","the netherlands","Delfzijlstraat 60, arnhem, the netherlands","mevr l.  Bokken",0,0,0,1,1,0,0,0
+"van houten","TV","v","56","Delfzijlstraat 58","arnhem","the netherlands","Delfzijlstraat 58, arnhem, the netherlands","mevr l.  wokken",0,0,0,1,0,0,0,1
+"van houten","Laptop","x","45","Delfzijlstraat 57","arnhem","the netherlands","Delfzijlstraat 57, arnhem, the netherlands","mevr l.  sokken",0,0,0,1,1,0,0,0
+"van houten","Smartphone","p","23","Delfzijlstraat 61","arnhem","the netherlands","Delfzijlstraat 61, arnhem, the netherlands","mevr l.  dokken",0,0,0,1,0,1,0,0
