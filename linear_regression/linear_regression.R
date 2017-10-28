@@ -288,10 +288,21 @@ coef(summary(lm(csat ~ C(region, contr.helmert),
 mod.en.metro.by.waste <- lm(energy ~ metro * waste, data = states.data)
 coef(summary(mod.en.metro.by.waste))
 
+#Test with green predictor
+mod.en.metro.by.green <- lm(energy ~ metro * green, data = states.data)
+coef(summary(mod.en.metro.by.green))
+
 ##   2. Try adding region to the model. Are there significant differences
 ##      across the four regions?
 states.data$region <- factor(states.data$region)
 mod.en.region <- lm(energy ~ metro * waste + region, data = states.data)
 coef(summary(mod.en.region))
 anova(mod.en.region)
+
+#Add region to green model
+states.data$region <- factor(states.data$region)
+mod.en.region <- lm(energy ~ metro * green + region, data = states.data)
+coef(summary(mod.en.region))
+anova(mod.en.region)
+
 
