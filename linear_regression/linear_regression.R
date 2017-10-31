@@ -292,17 +292,42 @@ coef(summary(mod.en.metro.by.waste))
 mod.en.metro.by.green <- lm(energy ~ metro * green, data = states.data)
 coef(summary(mod.en.metro.by.green))
 
+#Test with toxic predictor
+mod.en.metro.by.toxic <- lm(energy ~ metro * toxic, data = states.data)
+coef(summary(mod.en.metro.by.toxic))
+
+#Add in interaction terms and test
+sts.model3 <- lm(energy ~ metro + metro*green + metro*toxic, data = na.omit(states.data))
+summary(sts.model3)
+
+confint(sts.model3)
+hist(residuals(sts.model3))
+
+plot(sts.model3)
+anova(sts.model, sts.model3)
+
 ##   2. Try adding region to the model. Are there significant differences
 ##      across the four regions?
 states.data$region <- factor(states.data$region)
-mod.en.region <- lm(energy ~ metro * waste + region, data = states.data)
+mod.en.region <- lm(energy ~ metro * waste + region, data = na.omit(states.data))
 coef(summary(mod.en.region))
 anova(mod.en.region)
 
 #Add region to green model
 states.data$region <- factor(states.data$region)
-mod.en.region <- lm(energy ~ metro * green + region, data = states.data)
+mod.en.region <- lm(energy ~ metro * green + region, data = na.omit(states.data))
 coef(summary(mod.en.region))
 anova(mod.en.region)
+
+#Add region to toxic model
+mod.en.region2 <- lm(energy ~ metro * toxic + region, data = na.omit(states.data))
+coef(summary(mod.en.region2))
+anova(mod.en.region2)
+
+#Add region to total model (Model 3)
+sts.model3 <- lm(energy ~ metro + metro*green + metro*toxic + region, data = na.omit(states.data))
+coef(summary(sts.model3))
+anova(sts.model3)
+
 
 
