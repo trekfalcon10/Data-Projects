@@ -131,7 +131,6 @@ evrwrk_mod.cf[, "Estimate"] <- exp(coef(evrwrk_mod))
 evrwrk_mod.cf
 
 #Make prediction
-#test_pred <- predict(evrwrk_mod, newdata = data.frame(r_maritl = "2 Married - spouse not in household"), type = "response")
 
 # Create a dataset with predictors set at desired levels
 predDat1 <- with(NH11,
