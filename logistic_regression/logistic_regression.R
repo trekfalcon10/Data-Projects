@@ -117,9 +117,13 @@ levels(NH11$r_maritl)
 
 str(NH11$age_p)
 
-# collapse all missing values to NA
-NH11$everwrk <- factor(NH11$everwrk, levels=c("2 No", "1 Yes"))
-NH11$r_maritl <- factor(NH11$r_maritl, levels = c("0 Under 14 years", "1 Married - spouse in household", "2 Married - spouse not in household", "3 Married - spouse in household unknown", "4 Widowed", "5 Divorced", "6 Separated", "7 Never married", "8 Living with partner"))
+# Remove unused values
+NH11 <- transform(NH11,
+                  everwrk = factor(everwrk,
+                                   levels = c("1 Yes", "2 No")),
+                  r_maritl = droplevels(r_maritl))
+
+NH11$r_maritl <- na.omit(NH11$r_maritl)
 
 #Create regression model
 evrwrk_mod <- glm(everwrk ~ age_p + r_maritl, data = NH11, family = "binomial")
@@ -132,13 +136,15 @@ evrwrk_mod.cf
 
 #Make prediction
 
-# Create a dataset with predictors set at desired levels
+# Create a dataset with predictors set at desired levels, removing NA's
+
 predDat1 <- with(NH11,
-                expand.grid(age_p = age_p[1:length(age_p)],
-                            r_maritl = c( "1 Married - spouse in household", 
-                                         "2 Married - spouse not in household", 
-                                         "4 Widowed", "5 Divorced", "6 Separated", 
-                                         "7 Never married", "8 Living with partner")))
+                 expand.grid(age_p = age_p[1:length(age_p)],
+                             r_maritl = na.omit(c( "1 Married - spouse in household", 
+                                                   "2 Married - spouse not in household", 
+                                                   "4 Widowed", "5 Divorced", "6 Separated", 
+                                                   "7 Never married", "8 Living with partner"))))
+
 # predict everwork at those levels
 predWrk <- cbind(predDat1, predict(evrwrk_mod, type = "response",
                        se.fit = TRUE, interval="confidence",
@@ -168,7 +174,7 @@ predMar7 <- subset(predWrk, predWrk$r_maritl == "7 Never married")
 
 predMar8 <- subset(predWrk, predWrk$r_maritl == "8 Living with partner")
 
-#Get mean of each prediction
+#Get mean of each prediction for each category (excludes Unknown marital status)
 mean(predMar1$fit)
 mean(predMar2$fit)
 mean(predMar4$fit)
@@ -177,3 +183,6 @@ mean(predMar6$fit)
 mean(predMar7$fit)
 mean(predMar8$fit)
 
+#Show fit for each category with lower and upper bounds (includes Unknown marital status)
+library(effects)
+data.frame(Effect("r_maritl", evrwrk_mod))
