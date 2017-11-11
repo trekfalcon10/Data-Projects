@@ -44,10 +44,9 @@ wssplot(df)
         # gained by adding more clusters.
 
 #   * Look at the code for wssplot() and figure out how it works
-      # Loops over the number of columns (except the omitted column) and sums the withinss values
+      # Loops over the number of clusters being considered and sums the withinss values
       # corresponding to each data center and assigns it to the corresponding element of wss. 
-      # It then plots the number of columns versus each wss computed.  Number of columns here also 
-      # corresponds to number of potential clusters. 
+      # It then plots the number of clusters versus each wss computed.  
 
 # Method 2: Use the NbClust library, which runs many experiments
 # and gives a distribution of potential number of clusters.
@@ -89,7 +88,7 @@ fit.km$size
 library(cluster)
 clusplot(df, fit.km$cluster)
 
-  # According to the plot, the clusters are explained by more than half (55.4%) of the variability.
+  # According to the plot, the clusters are explained by more than half (55.41%) of the variability.
   # There is very little overlapping of the clusters.  Therefore, this appears to be a good clustering.
 
 
